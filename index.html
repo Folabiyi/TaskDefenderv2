@@ -10,7 +10,30 @@
     <meta property="og:description" content="A comprehensive productivity application with AI-powered motivation, smart interventions, and secure local storage.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://taskdefender.online">
+
+    <!-- ✅ Firebase App & Analytics SDK -->
+    <script defer src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics-compat.js"></script>
+
+    <!-- ✅ Your Firebase Config -->
+    <script defer>
+      window.addEventListener('DOMContentLoaded', () => {
+        const firebaseConfig = {
+          apiKey: "AIzaSyAC6djce4x6qRKYbhEfoUps40NKm1ubQ-g",
+          authDomain: "taskdefender-68cfd.firebaseapp.com",
+          projectId: "taskdefender-68cfd",
+          storageBucket: "taskdefender-68cfd.firebasestorage.app",
+          messagingSenderId: "951571068570",
+          appId: "1:951571068570:web:97bc8a4d84e754e0199123",
+          measurementId: "G-PV1QHZCM7W"
+        };
+
+        const app = firebase.initializeApp(firebaseConfig);
+        const analytics = firebase.analytics(app);
+      });
+    </script>
   </head>
+
   <body>
     <div id="root"></div>
     <script type="module" src="/src/landing/index.tsx"></script>
